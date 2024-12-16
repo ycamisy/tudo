@@ -198,3 +198,67 @@ ul {
   li a:hover {
     background-color: #b84c65;
   }
+/* Menu Dropdown (Hamburger) */
+.menu-container {
+    position: fixed;  /* Fixa o menu no canto superior esquerdo */
+    top: 10px;  /* Distância do topo */
+    left: 10px;  /* Distância da esquerda */
+    z-index: 1000;  /* Fica acima de todos os outros elementos */
+    display: none; /* Escondido por padrão */
+}
+
+.menu-button {
+    background-color: #ffbecc;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.menu-button span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    border-radius: 2px;
+}
+
+.menu-button:hover {
+    background-color: #b84c65;
+}
+
+.menu-dropdown {
+    display: none; /* Menu começa escondido */
+    position: absolute;
+    top: 100%; /* Fica abaixo do botão */
+    left: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.menu-dropdown a {
+    display: block;
+    padding: 12px 16px;
+    color: #333;
+    text-decoration: none;
+}
+
+.menu-dropdown a:hover {
+    background-color: #f1f1f1;
+}
+
+.menu-container:hover .menu-dropdown {
+    display: block; /* Mostra o menu quando o contêiner é "hovered" */
+}
