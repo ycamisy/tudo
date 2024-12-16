@@ -5,6 +5,207 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos</title>
     <link rel="stylesheet" href="produto.css">
+<style>
+body {
+    margin: 0;
+    font-family: Verdana, sans-serif;
+    background-color: #f7f7f7;
+}
+
+#titulo0 {
+    font-family: 'Futura Std', sans-serif;
+    text-align: center;
+    color: white;
+    margin: 0;
+    font-size: 40px;
+    padding: 10px 0;
+    font-weight: 650;
+    background-color: #ef6f82;
+    width: 100%;
+}
+
+#titulo {
+    font-family: 'Futura Std', sans-serif;                                              
+    text-align: center;
+    color: #361920;
+    font-size: 40px;
+    font-weight: 850;
+    background-image: url('img-produtos/bolo-fundo.png');
+    background-size: cover; /* Garante que a imagem de fundo cubra o espaço */
+    background-position: center; /* Centraliza a imagem */
+    padding: 50px 0; /* Adiciona espaço interno acima e abaixo */
+    margin: 0; /* Remove margens externas */
+}
+
+#titulo2 {
+    font-family: 'Futura Std', sans-serif;                                              
+    text-align: center;
+    color: #ffffff;
+    margin: 0; /* Remove todas as margens */
+    font-size: 30px;
+    font-weight: 650;
+    background-color: #ef6f82; /* Cor de fundo */
+    padding: 20px 0; /* Adiciona espaço interno acima e abaixo */
+    display: block; /* Garante que ocupe 100% da largura */
+    width: 100%; /* Cobre toda a largura disponível */
+}
+
+
+#texto {
+    color: #b84c65;
+    text-align: center;
+    font-family: 'Futura Std', sans-serif;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+#produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.produtos {
+    width: 22%; /* Cada produto ocupa 22% da largura da linha */
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background-color 0.3s;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 20px; /* Para dar espaço entre as linhas */
+}
+
+.produtos img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* A imagem cobre completamente a área do produto */
+}
+
+.produtos .info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #b84c65;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: left;
+    overflow: hidden;
+    border-radius: 0 0 10px 10px;
+    transition: transform 0.3s;
+}
+
+.produtos:hover .info{
+    background-color: #ffbecc;
+}
+
+.produtos .nome {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.produtos .ingredientes {
+    font-size: 14px;
+    opacity: 0;
+    transform: translateY(50%); /* Mantém a animação inicial */
+    transition: transform 0.3s, opacity 0.3s;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 1.2;
+    position: relative;
+    top: -15px;
+    color: #b84c65
+}
+
+.produtos .preco {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 5px 0 0;
+    text-align: right;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.produtos:hover .preco {
+    transform: translateY(-50%);
+    opacity: 0;
+
+}
+
+.produtos:hover .nome {
+    transform: translateY(-50%);
+    opacity: 0;
+}
+
+.produtos:hover .ingredientes {
+    transform: translateY(0);
+    opacity: 1;
+
+}
+
+@media screen and (max-width: 768px) {
+    /* Em telas menores, os produtos ocuparão 45% da largura */
+    .produtos {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Em telas muito pequenas (como celulares), os produtos ocuparão 90% da largura */
+    .produtos {
+        width: 90%;
+    }
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0; 
+    padding: 0; 
+    overflow: hidden;
+    background-color: #ffbecc;
+    width: 100%; 
+    border: none; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+  }
+
+  ul img{
+    float: left;
+    width: 150px; 
+    height: 100px;
+  }
+
+  li {
+    float: right;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 26px;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    background-color: #b84c65;
+  }
+</style>
 </head>
 <body>
   <ul id="navigator">
