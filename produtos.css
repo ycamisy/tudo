@@ -323,3 +323,43 @@ ul {
   position: relative;
   overflow: hidden;
 }
+.container > div .content {
+  font-size: 1.5rem;
+  color: #fff;
+  display: flex;
+  align-items: center; /* Centraliza horizontalmente */
+  padding: 15px;
+  opacity: 0;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center; /* Centraliza verticalmente */
+  background: rgb(46, 2, 19);
+  background: linear-gradient(0deg, rgba(46, 2, 28, 0.676) 0%, rgba(255, 255, 255, 0) 100%);
+  transform: translateY(100%);
+  transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+  visibility: hidden;
+}
+
+.container > div:hover .content {
+  opacity: 1;
+  transform: translateY(0%);
+  visibility: visible;
+}
+
+a {
+  text-decoration: none; /* Remove o sublinhado */
+  color: inherit; /* Mantém a cor original do texto */
+}
+
+.container > div:hover {
+  flex: 0 0 300px; /* Mantém largura fixa ao passar o mouse */
+  height: 300px; /* Mantém altura fixa */
+  box-shadow: 1px 3px 15px #22031d;
+  transform: translatey(-10px); /* Ajusta elevação */
+}
+
+.container > div:hover .content {
+  opacity: 1;
+  transform: translatey(0%);
+  visibility: visible;
+}
