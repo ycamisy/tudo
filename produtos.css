@@ -261,3 +261,65 @@ ul {
 .menu-container:hover .menu-dropdown {
     display: block; /* Mostra o menu quando o contêiner é "hovered" */
 }
+
+/* Responsividade - Mostrar o menu dropdown apenas em telas menores */
+@media only screen and (max-width: 1024px) {
+    .menu-container {
+        display: inline-block; /* Exibe o menu hamburger em dispositivos menores */
+    }
+
+    #navigator {
+        display: none; /* Esconde o menu tradicional */
+    }
+
+    .menu-dropdown {
+        display: none;
+    }
+
+    .menu-container:hover .menu-dropdown {
+        display: block; /* Exibe o menu quando passar o mouse no hambúrguer */
+    }
+}
+
+/* Mostrar o menu tradicional em telas maiores */
+@media only screen and (min-width: 1025px) {
+    #navigator {
+        display: flex; /* Exibe o menu tradicional em desktops */
+    }
+
+    .menu-container {
+        display: none; /* Esconde o menu hamburger */
+    }
+}
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Este é o código CSS completo */
+
+.container {
+  display: grid; /* Muda para Grid Layout */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsivo: cria colunas de no mínimo 300px */
+  gap: 20px; /* Espaçamento entre os itens */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  margin: 50px auto; /* Margem vertical e centraliza o contêiner */
+  max-width: 100%; /* Garante que o contêiner não ultrapasse a largura */
+  padding: 0 20px; /* Adiciona espaçamento interno */
+}
+
+.container > div {
+  height: 300px; /* Define altura fixa */
+  border-radius: 0.5rem;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  box-shadow: 1px 5px 15px #16080b;
+  position: relative;
+  overflow: hidden;
+}
