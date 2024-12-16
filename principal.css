@@ -211,19 +211,19 @@ li a:hover {
 }
 
 .container > div:nth-of-type(1) {
-  background: url('img-produtos/classicos.jpg') no-repeat 50% / cover;
+  background: url('img-home/classicos.jpg') no-repeat 50% / cover;
 }
 
 .container > div:nth-of-type(2) {
-  background: url('img-produtos/redvelvet.png') no-repeat 50% / cover;
+  background: url('img-home/redvelvet.png') no-repeat 50% / cover;
 }
 
 .container > div:nth-of-type(3) {
-  background: url('img-produtos/bento.png') no-repeat 50% / cover;
+  background: url('img-home/bento.png') no-repeat 50% / cover;
 }
 
 .container > div:nth-of-type(4) {
-  background: url('img-produtos/kit.png') no-repeat 50% / cover;
+  background: url('img-home/kit.png') no-repeat 50% / cover;
 }
 
 .container > div .content {
