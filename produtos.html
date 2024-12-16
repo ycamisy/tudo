@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+    <link rel="stylesheet" href="produto.css">
+    <style>
+        
+salvar como produto.css
+
+body {
+    margin: 0;
+    font-family: Verdana, sans-serif;
+    background-color: #f7f7f7;
+}
+
+#titulo0 {
+    font-family: 'Futura Std', sans-serif;
+    text-align: center;
+    color: white;
+    margin: 0;
+    font-size: 40px;
+    padding: 10px 0;
+    font-weight: 650;
+    background-color: #ef6f82;
+    width: 100%;
+}
+
+#titulo {
+    font-family: 'Futura Std', sans-serif;                                              
+    text-align: center;
+    color: #361920;
+    font-size: 40px;
+    font-weight: 850;
+    background-image: url('c:/imgs/bolo-fundo.png');
+    background-size: cover; /* Garante que a imagem de fundo cubra o espaço */
+    background-position: center; /* Centraliza a imagem */
+    padding: 50px 0; /* Adiciona espaço interno acima e abaixo */
+    margin: 0; /* Remove margens externas */
+}
+
+#titulo2 {
+    font-family: 'Futura Std', sans-serif;                                              
+    text-align: center;
+    color: #ffffff;
+    margin: 0; /* Remove todas as margens */
+    font-size: 30px;
+    font-weight: 650;
+    background-color: #ef6f82; /* Cor de fundo */
+    padding: 20px 0; /* Adiciona espaço interno acima e abaixo */
+    display: block; /* Garante que ocupe 100% da largura */
+    width: 100%; /* Cobre toda a largura disponível */
+}
+
+
+#texto {
+    color: #b84c65;
+    text-align: center;
+    font-family: 'Futura Std', sans-serif;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+#produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.produtos {
+    width: 22%; /* Cada produto ocupa 22% da largura da linha */
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background-color 0.3s;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 20px; /* Para dar espaço entre as linhas */
+}
+
+.produtos img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* A imagem cobre completamente a área do produto */
+}
+
+.produtos .info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #b84c65;
+    ;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: left;
+    overflow: hidden;
+    border-radius: 0 0 10px 10px;
+    transition: transform 0.3s;
+}
+
+.produtos:hover .info{
+    background-color: #ffbecc;
+}
+
+.produtos .nome {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.produtos .ingredientes {
+    font-size: 14px;
+    opacity: 0;
+    transform: translateY(50%); /* Mantém a animação inicial */
+    transition: transform 0.3s, opacity 0.3s;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 1.2;
+    position: relative;
+    top: -15px;
+    color: #b84c65
+}
+
+.produtos .preco {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 5px 0 0;
+    text-align: right;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.produtos:hover .preco {
+    transform: translateY(-50%);
+    opacity: 0;
+   
+}
+
+.produtos:hover .nome {
+    transform: translateY(-50%);
+    opacity: 0;
+}
+
+.produtos:hover .ingredientes {
+    transform: translateY(0);
+    opacity: 1;
+
+}
+
+@media screen and (max-width: 768px) {
+    /* Em telas menores, os produtos ocuparão 45% da largura */
+    .produtos {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Em telas muito pequenas (como celulares), os produtos ocuparão 90% da largura */
+    .produtos {
+        width: 90%;
+    }
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0; 
+    padding: 0; 
+    overflow: hidden;
+    background-color: #ffbecc;
+    width: 100%; 
+    border: none; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+  }
+  
+  ul img{
+    float: left;
+    width: 150px; 
+    height: 100px;
+  }
+  
+  li {
+    float: right;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 26px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #b84c65;
+  }
+    </style>
+</head>
+<body>
+
+  <ul id="navigator">
+  
+  
+    <img src="c:\imgs/logoOriginal.png">
+    <li><a href="shdby.html">Home</a></li>
+    <li><a href="#caseiro">Caseiros</a></li>
+    <li><a href="#gourmet">Gourmet</a></li>
+    <li><a href="#bento">Bento Cakes</a></li>
+    <li><a href="">Kit Festa</a></li>
+    
+    
+    
+  </ul>
+  
+
+
+
+
+
+    <section id="products" class="cardapio">
+        <p id="titulo">Produtos</p>
+        <div id="caseiro">
+        <p id="titulo2">Caseiros</p>
+        <section id="produtos">
+          
+            <section class="produtos">
+                <img src="fubacas.jpg" alt="Bolo de fuba">
+                <div class="info">
+                    <p class="nome">Bolo de fuba</p>
+                    <p class="ingredientes">Bolo de fuba com açucar de confeiteiro.</p>
+                    <p class="preco">R$ 45,00 KG</p>
+                </div>
+            </section>
+
+            <section class="produtos">
+                <img src="Bolo Vulcão.jpg" alt="Bolo Chocolate">
+                <div class="info">
+                    <p class="nome">Bolo vulcão de chocolate</p>
+                    <p class="ingredientes">Bolo de chocolate com cobertura de brigadeiro.</p>
+                    <p class="preco">R$ 55,00 KG</p>
+                </div>
+            </section>
+
+            <section class="produtos">
+                <img src="bolodemorangocas.jpg" alt="Bolo de Morango">
+                <div class="info">
+                    <p class="nome">Bolo de Morango</p>
+                    <p class="ingredientes">Bolo de morango com açucar de confeiteiro.</p>
+                    <p class="preco">R$ 45,00 KG</p>
+                </div>
+            </section>
+            <section class="produtos">
+              <img src="boloformigu.jpg" alt="Bolo formigueiro">
+              <div class="info">
+                  <p class="nome">Bolo formigueiro</p>
+                  <p class="ingredientes">Bolo formigueiro com cobertura e granulado de chocolate.</p>
+                  <p class="preco">R$ 45,00 KG</p>
+              </div>
+          </section>
+
+
+
+        <section class="produtos">
+            <img src="cococaseiro.jpg" alt="Bolo de coco caseiro">
+            <div class="info">
+                <p class="nome">Bolo de coco</p>
+                <p class="ingredientes">Bolo de coco caseiro com coco ralado.</p>
+                <p class="preco">R$ 45,00 KG</p>
+            </div>
+        </section>
+
+        <section class="produtos">
+            <img src="bolodelimao.jpg" alt="Bolo de limão caseiro">
+            <div class="info">
+                <p class="nome">Bolo de limão</p>
+                <p class="ingredientes">Bolo de limão com calda, e rodelas da fruta.</p>
+                <p class="preco">R$ 55,00 KG</p>
+            </div>
+        </section>
+
+        <section class="produtos">
+            <img src="Bolodepaçocacas.jpg" alt="Bolo de paçoca caseiro">
+            <div class="info">
+                <p class="nome">Bolo de paçoca</p>
+                <p class="ingredientes">Bolo de paçoca caseira, com farelos e calda.</p>
+                <p class="preco">R$ 45,00 KG</p>
+            </div>
+        </section>
+        <section class="produtos">
+          <img src="bolodemaracujacas.jpg" alt="Bolo de maracujá">
+          <div class="info">
+              <p class="nome">Bolo de maracujá</p>
+              <p class="ingredientes"> Bolo de maracujá com cobertura e polpa como recheio.</p>
+              <p class="preco">R$ 45,00 KG</p>
+          </div>
+      </section>
+        </section>
+      </div>
+
+
+        <div id="gourmet"> 
+        <p id="titulo2">Gourmet</p>
+        <section id="produtos">
+          
+            <section class="produtos">
+                <img src="redvelvet.jpg" alt="Bolo Red Velvet">
+                <div class="info">
+                    <p class="nome">Red Velvet</p>
+                    <p class="ingredientes">Bolo Red Velvet com cream cheese.</p>
+                    <p class="preco">R$ 85,00 KG</p>
+                </div>
+            </section>
+
+            <section class="produtos">
+                <img src="kakaka.jpg" alt="Bolo Chocolate">
+                <div class="info">
+                    <p class="nome">Bolo de chocolate</p>
+                    <p class="ingredientes">Bolo de chocolate e creme com recheio de ninho e brigadeiro.</p>
+                    <p class="preco">R$ 95,00 KG</p>
+                </div>
+            </section>
+
+            <section class="produtos">
+                <img src="Anniv.jpg" alt="Bolo de Morango">
+                <div class="info">
+                    <p class="nome">Bolo de morango</p>
+                    <p class="ingredientes">Bolo de Morango e ninho com adicional de chantilly.</p>
+                    <p class="preco">R$ 95,00 KG</p>
+                </div>
+            </section>
+            <section class="produtos">
+              <img src="florestanegra.jpg" alt="floresta negra">
+              <div class="info">
+                  <p class="nome">Floresta negra</p>
+                  <p class="ingredientes">Bolo floresta negra com cerejas.</p>
+                  <p class="preco">R$ 100,00 KG</p>
+              </div>
+          </section>
+
+
+
+          <section class="produtos">
+            <img src="Lemon Drip Cake.jpg" alt="Bolo de limão">
+            <div class="info">
+                <p class="nome">Bolo de limão</p>
+                <p class="ingredientes">Bolo de limão com glacê e chantilly.</p>
+                <p class="preco">R$ 85,00 KG</p>
+            </div>
+        </section>
+
+        <section class="produtos">
+            <img src="blue velvet.jpg" alt="Blue velvet">
+            <div class="info">
+                <p class="nome">Bolo de chocolate</p>
+                <p class="ingredientes">Bolo blue velvet com cream cheese.</p>
+                <p class="preco">R$ 85,00 KG</p>
+            </div>
+        </section>
+
+        <section class="produtos">
+            <img src="bolomarta.jpg" alt="Marta Rocha">
+            <div class="info">
+                <p class="nome">Bolo Marta Rocha</p>
+                <p class="ingredientes">Bolo de pão de ló e chocolate, com nozes, damascos e adicional de cerejas por cima.</p>
+                <p class="preco">R$ 95,00 KG</p>
+            </div>
+        </section>
+        <section class="produtos">
+          <img src="chomor.jpg" alt="Chocolate com morango">
+          <div class="info">
+              <p class="nome">Chocalate com morango</p>
+              <p class="ingredientes">Bolo de chocolate com morango confeitado com chantilly.</p>
+              <p class="preco">R$ 100,00 KG</p>
+          </div>
+      </section>
+        </section>
+      </div> 
+
+      <div id="bento"> 
+        <p id="titulo2">Bento Cakes</p>
+        <section id="produtos">
+          
+            <section class="produtos">
+                <img src="forks.jpg" alt="Bento morango">
+                <div class="info">
+                    <p class="nome">Bento cake fork</p>
+                    <p class="ingredientes">Sabores variados: chocolate; ninho; marta rocha, etc.</p>
+                    <p class="preco">R$ 40,00 KG</p>
+                </div>
+            </section>
+
+            <section class="produtos">
+                <img src="dinossauro.jpg" alt="Bolo Chocolate">
+                <div class="info">
+                    <p class="nome">Bento cake infantil</p>
+                    <p class="ingredientes">Sabores variados: chocolate; ninho; marta rocha, etc.</p>
+                    <p class="preco">R$ 40,00 KG</p>
+                </div>
+            </section>
+
+            <section class="produtos">
+                <img src="homemaranha.jpg" alt="Bolo de Morango">
+                <div class="info">
+                    <p class="nome">Bento cake tematica herois</p>
+                    <p class="ingredientes">Sabores variados: chocolate; ninho; marta rocha, etc.</p>
+                    <p class="preco">R$ 40,00 KG</p>
+                </div>
+            </section>
+            <section class="produtos">
+              <img src="capivara.jpg" alt="bolo de limão">
+              <div class="info">
+                  <p class="nome">Temas diversos</p>
+                  <p class="ingredientes">Sabores variados: chocolate; ninho; marta rocha, etc.</p>
+                  <p class="preco">R$ 40,00 KG</p>
+              </div>
+          </section>
+        </section>
+      </div>
+
+      <div id="kit"> 
+        <p id="titulo2">Kit Festa</p>
+        <section id="produtos">
+          
+            <section class="produtos">
+                <img src="kit05.jpg" alt="kit">
+                <div class="info">
+                    <p class="nome">5 convidados</p>
+                    <p class="ingredientes">Conjunto simples com um bolo mais doces.</p>
+                    <p class="preco">R$ 85,00 KG</p>
+                </div>
+            </section>
+
+            <section class="produtos">
+                <img src="kitfest1.jpg" alt="kit2">
+                <div class="info">
+                    <p class="nome">10 convidados</p>
+                    <p class="ingredientes">Inclui um bolo, variedade de doces e salgados, adicional de palha italiana.</p>
+                    <p class="preco">R$ 120,00 KG</p>
+                </div>
+            </section>
+
+            <section class="produtos">
+                <img src="kit2.jpg" alt="kit simples">
+                <div class="info">
+                    <p class="nome">25 convidados</p>
+                    <p class="ingredientes">Bolo mais salgados e docinhos variados.</p>
+                    <p class="preco">R$ 150,00 KG</p>
+                </div>
+            </section>
+            <section class="produtos">
+              <img src="image_1024.jpg" alt="Bolo de Morango">
+              <div class="info">
+                  <p class="nome">35+ convidados</p>
+                  <p class="ingredientes">Conjunto completo, incluindo bolo, refrigerantes, salgados e doces.</p>
+                  <p class="preco">R$ 200,00 KG</p>
+              </div>
+          </section>
+        </section>
+      </div>
+
+    </section>
+</body>
+</html>

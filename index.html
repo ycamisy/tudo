@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Douce Vie </title>
+  <link rel="icon" type="image/x-icon" href="/imgs/logobranca.png">
+<meta name="description" coontent="Douce Vie">
+<meta name="keywords" content="confeitaria, doces, bolos, sobremesas">
+<meta name="author" content="Rebeca Peres Ferreira">
+<meta name="reply-to" content="rebeca.peres@estudante.iftm.edu.br">
+<meta name="generator" content="Visual Code">
+
+<link href="https://fonts.cdnfonts.com/css/futura-std-4" rel="stylesheet">
+<link href="principal.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="menu-container">
+    <button class="menu-button">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <div class="menu-dropdown">
+        <a href="#home">Home</a>
+        <a href="#news">Novidades</a>
+        <a href="#products">Produtos</a>
+        <a href="#about">Sobre</a>
+        <a href="#contact">Contato</a>
+    </div>
+</div>
+
+<!-- Menu tradicional para desktop -->
+<ul id="navigator">
+    <img src="c:/imgs/logoOriginal.png">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#news">Novidades</a></li>
+    <li><a href="#products">Produtos</a></li>
+    <li><a href="#about">Sobre</a></li>
+    <li><a href="#contact">Contato</a></li>
+</ul>
+
+  
+  <div class="slideshow-container">
+  
+  <div class="mySlides fade">
+    <img src="c:/imgs/Doce.png" style="width:100%">
+    <div class="text"></div>
+  </div>
+  
+  <div class="mySlides fade">
+    <img src="c:/imgs/sbolo.png" style="width:100%">
+    <div class="text"></div>
+  </div>
+  
+  <div class="mySlides fade">
+    <img src="c:/imgs/Petisco.png" style="width:100%">
+    <div class="text"></div>
+  </div>
+  
+  </div>
+  
+  <div id="home">
+    <a href="https://wa.me/5534996551942" target="_blank">
+    </a>
+  </div>
+  
+  <section class="novidades">
+    <div id="news">
+      <p id="titulo">Novidades</p>
+  
+      <section id="novo">
+        <section class="novo">
+          <img src="c:/imgs/moto.png">
+          <p>Receba direto na sua casa!</p>
+        </section>
+        <section class="novo">
+          <img src="c:/imgs/balao.png">
+          <p>Dê um charme na sua festa com nossas decorações! <br> Confira nosso catálogo de decorações.</p>
+        </section>
+        <section class="novo">
+          <img src="c:/imgs/ifood.png">
+          <p>Estamos agora no Ifood!</p>
+        </section>
+      </section>
+    </div>
+  </section>
+  
+  <p id="titulo">Produtos</p>
+  <p id="titulo2">Nossos produtos feitos com muito carinho para você! <br> <b>Clique e confira!</b></p>
+
+  <div class="container">
+    <!-- Cada item agora é um link para teste.html -->
+    <div>
+      <a href="produtos.html">
+        <div class="content">
+          <h2>Clássico</h2>
+        
+        </div>
+      </a>
+    </div>
+    <div>
+      <a href="produtos.html">
+        <div class="content">
+          <h2>Gourmet</h2>
+          
+        </div>
+      </a>
+    </div>
+    <div>
+      <a href="produtos.html">
+        <div class="content">
+          <h2>Bento</h2>
+          
+        </div>
+      </a>
+    </div>
+    <div>
+      <a href="produtos.html">
+        <div class="content">
+          <h2>Kit Festa</h2>
+          
+        </div>
+      </a>
+    </div>
+  </div>
+  
+  <div id="about">
+      <section class="sobre">
+      <section class="textbox">
+        <p id="titulo2">Nossa história</p>
+        <p id="texto2">A <b>Douce Vie</b> nasceu com uma história de amor, que tornou os dias de todos mais doce.<br> <b>Gabriel</b>, nosso fundador, cresceu assistindo e aprendendo com sua avó, <b>Dona Marta</b> seus doces favoritos. A avó não só ensinou Gabriel a arte de cozinhar, mas também a acreditar que os sabores têm poder de unir as pessoas.<br>Mesmo adoecida, a avó de Gabriel fazia questão de cozinhar. Em um desses momentos na cozinha Dona Marta deixou uma mensagem: <b>“Sempre encontre uma maneira de espalhar doçura, mesmo nos dias mais amargos.”</b> Essas palavras guiaram Gabriel após a perda da avó.</p>
+      
+      </section>
+      </section>
+      </div>
+      
+  
+  <center>
+  
+    
+  <div id="contact"class="contato">
+      <img id="logo" src="c:/imgs/logobranca.png">
+    <h2>Contate-nos</h2>
+    <div class="contatoimg">
+      <img src="c:/imgs/whatsapp-white.png" alt="whatsapp logo" width="24px" height="24px">
+      <p>(34)99655-1942</p>
+      <img src="c:/imgs/instagram-logo.png" alt="Instagram logo" width="24px" height="24px">
+      <p>@doucevieudi</p>
+    </div>
+    
+  </div>
+  
+  
+  
+  
+  
+  <script>
+  let slideIndex = 0;
+  showSlides();
+  
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    setTimeout(showSlides, 3000); 
+  }
+  </script>
