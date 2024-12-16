@@ -22,7 +22,7 @@ body {
     color: #361920;
     font-size: 40px;
     font-weight: 850;
-    background-image: url('c:/imgs/bolo-fundo.png');
+    background-image: url('img-produtos/bolo-fundo.png');
     background-size: cover; /* Garante que a imagem de fundo cubra o espaço */
     background-position: center; /* Centraliza a imagem */
     padding: 50px 0; /* Adiciona espaço interno acima e abaixo */
@@ -86,7 +86,6 @@ body {
     width: 100%;
     height: 70px;
     background-color: #b84c65;
-    ;
     color: white;
     padding: 10px;
     box-sizing: border-box;
